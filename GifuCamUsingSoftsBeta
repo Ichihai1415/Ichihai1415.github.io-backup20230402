@@ -1,0 +1,135 @@
+2022/12/03更新
+《使用中》
+【表示しているもの】
+JQuake
+https://jquake.net/
+
+KyoshinEewViewer for ingen
+https://svs.ingen084.net/kyoshineewviewer/
+
+P2P地震情報 新Windows版
+https://www.p2pquake.net/
+
+QWPASS
+https://hachi508.com/QWPASS/
+
+強震モニタ24h
+https://eqdata.sakura.ne.jp/kyoshin/ws.html
+
+Early-est
+http://early-est.rm.ingv.it/warning.html
+
+気象庁気象マップ
+https://www.jma.go.jp/bosai/map.html
+通常は気温
+
+Clock For Fuku
+https://fuku1213.hatenablog.com/entry/2021/03/31/214957
+
+緊急地震速報アラーム+ 応急版(EEW時のみ)
+http://wsparkle.s1008.xrea.com/programs/eewa2/
+
+Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ)
+https://github.com/ExpTechTW/TREM
+
+Moo0システムモニター
+https://jpn.moo0.com/software/SystemMonitor/
+
+【画面外(動作・SEなど)】
+棒読みちゃん
+http://chi.usamimi.info/Program/Application/BouyomiChan/
+
+The Last 10-Second
+http://weathernews.jp/quake/html/urgentquake.html
+
+OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
+https://obsproject.com
+
+FileKCC
+https://twitter.com/KuriharaCamera/status/1326509746359205888
+	
+Kiwi Monitor
+https://kiwimonitor.amebaownd.com/ (配布終了)
+
+Sendkeys
+http://cspace.s2.xrea.com/
+
+《自作ソフト》
+【表示しているもの】
+EEW_Viewer2(非公開)
+https://github.com/Ichihai1415/EEW_Viewer2
+
+QuakeMapGenarator(ソースコードのみ公開)
+https://github.com/Ichihai1415/QuakeMapGenerator
+
+Telop
+https://github.com/Ichihai1415/Telop
+
+WorldQuakeViewer
+https://github.com/Ichihai1415/WorldQuakeViewer
+
+Arduino_Quake_Intensity_Viewer(ソースコードのみ公開)(計測:GROVE I2C三軸加速度センサADXL345(±16g)(設置方向:X=E,Y=N,Z=U) Seeeduino Nano)
+https://github.com/Ichihai1415/Arduino_Quake_Intensity_Viewer
+
+
+
+
+[以前の動画で使用]
+
+EqWatch
+https://melanion.info/eqwatch/
+
+強震モニタ Extension
+http://kyomoniex.web.fc2.com
+
+FileKCC
+https://twitter.com/KuriharaCamera/status/1326509746359205888
+
+EarthquakeMap
+https://software.kichi2004.jp/tag/earthquakemap/
+
+Quick_EarthQuake4
+https://eqfisofts.amebaownd.com/ (リンク切れ)
+
+緊急地震速報通知ソフト
+https://software.maikuradentetu.jp/download.php (リンク切れ)
+
+地震警報システム(公開中止)
+https://www.harusoft.haruinfo.com/tirorueqsoftware/
+
+QIM6 Professional
+Quake Info Monitor2021
+https://www.qim-quakeinfomonitor.com/ (リンク切れ)
+
+BR-N
+https://twitter.com/KuriharaCamera/status/1379819975116906501
+
+ティッカーくん
+https://rd.vector.co.jp/soft/winnt/net/se518506.html
+
+Weather Warning Map
+https://fuku1213.hatenablog.com/entry/2021/01/24/160005
+
+TTClock
+https://forest.watch.impress.co.jp/library/software/ttclock/
+
+防災情報読み上げ
+https://renitapps.com/link.html
+
+P2P地震情報(Windows版)
+https://www.p2pquake.net/download/
+
+P2P地震情報　緊急地震速報配信試験(β)
+https://www.p2pquake.net/eew_beta/
+
+P2P地震情報Monitor
+https://sites.google.com/site/p2pqmoni/home (リンク切れ)
+
+SignalNowX
+http://www.estrat.co.jp/signalnowx.html
+
+緊急地震速報 by Extension
+https://chrome.google.com/webstore/detail/%E7%B7%8A%E6%80%A5%E5%9C%B0%E9%9C%87%E9%80%9F%E5%A0%B1-by-extension/pebgngldogenhmnokpncolbajkelhjba
+
+Pone
+https://ch.nicovideo.jp/bousai-share/blomaga/ar1934799
