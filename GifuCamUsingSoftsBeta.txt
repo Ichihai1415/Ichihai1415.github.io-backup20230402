@@ -1,4 +1,4 @@
-2022/12/03更新
+2023/01/10更新
 《使用中》
 【表示しているもの】
 JQuake
@@ -21,7 +21,9 @@ http://early-est.rm.ingv.it/warning.html
 
 気象庁気象マップ
 https://www.jma.go.jp/bosai/map.html
-通常は気温
+
+TweetDeck(@UN_NERV)
+https://tweetdeck.twitter.com/
 
 Clock For Fuku
 https://fuku1213.hatenablog.com/entry/2021/03/31/214957
@@ -31,6 +33,9 @@ http://wsparkle.s1008.xrea.com/programs/eewa2/
 
 Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ)
 https://github.com/ExpTechTW/TREM
+
+地牛Wake Up!(EEW受信時のみ)
+https://eew.earthquake.tw/
 
 Moo0システムモニター
 https://jpn.moo0.com/software/SystemMonitor/
@@ -42,7 +47,7 @@ http://chi.usamimi.info/Program/Application/BouyomiChan/
 The Last 10-Second
 http://weathernews.jp/quake/html/urgentquake.html
 
-OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
+OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s)
 https://obsproject.com
 
 FileKCC
@@ -51,13 +56,16 @@ https://twitter.com/KuriharaCamera/status/1326509746359205888
 Kiwi Monitor
 https://kiwimonitor.amebaownd.com/ (配布終了)
 
+Quarog
+https://fuku1213.github.io/quarog-site/
+
 Sendkeys
 http://cspace.s2.xrea.com/
 
 《自作ソフト》
 【表示しているもの】
-EEW_Viewer2(非公開)
-https://github.com/Ichihai1415/EEW_Viewer2
+EEW Viewer2(非公開)
+-
 
 QuakeMapGenarator(ソースコードのみ公開)
 https://github.com/Ichihai1415/QuakeMapGenerator
@@ -71,8 +79,11 @@ https://github.com/Ichihai1415/WorldQuakeViewer
 Arduino_Quake_Intensity_Viewer(ソースコードのみ公開)(計測:GROVE I2C三軸加速度センサADXL345(±16g)(設置方向:X=E,Y=N,Z=U) Seeeduino Nano)
 https://github.com/Ichihai1415/Arduino_Quake_Intensity_Viewer
 
+S-net Viewer
+https://github.com/Ichihai1415/S-net_Viewer
 
-
+KyoshinMonitorDisplay(非公開)
+-
 
 [以前の動画で使用]
 
