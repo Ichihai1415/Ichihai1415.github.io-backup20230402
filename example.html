@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--よこそう！-->
+<html lang="ja">
+  <head>
+    <meta http-equiv="default-style" content="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="いちはいのウェブサイトです。">
+    <meta name="viewport" content=""><!--スマートフォン用?-->
+    <meta property="og:url" content="https://Ichihai1415.github.io/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ichihai1415's website">
+    <meta property="og:description" content="いちはいのウェブサイトです。">
+    <meta property="og:site_name" content="Ichihai's website">
+    <meta property="og:image" content="img/PSicon.jpg">
+    <meta property="og:locate" content="ja_JP">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="ProjectS31415_1">
+    <meta name="twitter:title" content="Ichihai1415's website">
+    <meta name="twitter:description" content="いちはいのウェブサイトです。">
+    <meta name="twitter:image" content="img/site_logo.png">
+    <title>
+      いちはいのサイト
+    </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Header_Inner">
+        <!--ロゴどうしようかな
+        <img class="Header_Logo" src="img/site_logo.svg">
+        -->
+        <div class="Header_Group">
+          <a href="/" class="Header_Item">TOP</a>
+          <a href="/sitemap.html" class="Header_Item">SITEMAP</a>
+          <a href="" class="Header_Item"></a>
+        </div>
+        <div class="Header_Group2">
+          <div class="DarkmodeSwitch">
+            <input id="DarkmodeSwitchButton" class="SwitchInput" type="checkbox">
+            <label for="DarkmodeSwitchButton" class="SwitchLabel"></label>
+            ダークモード
+          </div>
+          <div class="NowTimeDisplayRoot">
+            <div id="RealtimeClock" class="NowTimeDisplay">
+              Loading...
+              <noscript>取得できません</noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Main">
+      <div id="Main_Main" class="Main_Main">
+        <noscript>
+          <h1 style="color:red; font-size: 24px;">JavaScriptが有効になっていません。一部の挙動が正常に動作しない可能性があります。</h1>
+        </noscript>
+        <div class="Border_Margin">
+          <div id="Infos" class="Border">
+          お知らせ<br>
+          2023/00/00
+          <a href="" class="Border_Item">
+            改名のお知らせ<br>
+          </a>
+        </div>
+      </div>
+        <h1>目次</h1>
+        
+        
+        <div class="ContentsTable">
+          目次<br>
+          <div class="Content">
+            <a class="Content_Link1" href="#Content1">解説</a>
+          </div>
+          <div class="Content">
+            <a class="Content_Link2" href="#Content1">解説</a>
+          </div>
+          <div class="Content">
+            <a class="Content_Link1" href="#Content1">解説</a>
+          </div>
+          </div>
+        
+            <a id="Content1" class="Anchor"></a>
+            <h1 >あああ</h1>
+            <h2>iii</h2>
+        
+            </div>
+        <div class="Main_Links"><!--幅が狭い場合上に-->
+            <div id="TwitterInput">
+              <noscript>
+                JavaScriptが有効になっていません。
+              </noscript>
+              <div class="Twitter_Light" id="Twitter_Light">
+                <a class="twitter-timeline" height="200" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw"></a> 
+              </div>
+              <div class="Twitter_Dark" id="Twitter_Dark">
+                <a class="twitter-timeline" height="200" href="https://twitter.com/ProjectS31415_1?ref_src=twsrc%5Etfw" data-theme="dark"></a> 
+              </div>
+            </div>
+        
+        
+        
+        
+        
+        </div>
+        
+        
+        
+        </div>
+
+<div class="Ender">
+  © 2022 Ichihai1415  All rights reserved. 特に指定がない限り、すべてのコンテンツの無断転載等を禁じます。
+</div>
+
+
+
+<script>//読み込み時、設定がダークモードの時チェックボックスにチェックする
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches == true)
+      {
+        document.querySelector(`input[type='checkbox'][class='SwitchInput']`).checked = true;
+        document.body.classList.remove('LightColor')
+        document.body.classList.add('DarkColor')
+        Twitter_Light.setAttribute('style', 'Display:none');
+      }
+    </script>
+    <script>//ダークモード
+      const Checked = document.querySelector('#DarkmodeSwitchButton');
+      Checked.addEventListener("change", () => 
+      {
+        if (Checked.checked == true)
+        {//ダークモード
+          document.body.classList.remove('LightColor')
+          document.body.classList.add('DarkColor')
+          Twitter_Light.setAttribute('style', 'Display:none');
+          Twitter_Dark.setAttribute('style', 'Display:block');
+        }
+        else
+        {//ライトモード
+          document.body.classList.remove('DarkColor')
+          document.body.classList.add('LightColor')
+          Twitter_Dark.setAttribute('style', 'Display:none');
+          Twitter_Light.setAttribute('style', 'Display:block');
+        }
+      });
+    </script>
+    <script>//時計
+      function Puls0(Num) 
+      {
+        var NewNum = Num;
+        if(Num < 10)
+        {//桁数が1桁だったら0足して2桁に
+          NewNum = "0" + Num;
+        }
+        return NewNum;
+      }
+      function ShowClock() 
+      {
+        var NowTime = new Date();
+        var NowTimeHour = Puls0(NowTime.getHours());
+        var NowTimeMin  = Puls0(NowTime.getMinutes());
+        var NowTimeSec  = Puls0(NowTime.getSeconds());
+        var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
+        document.getElementById("RealtimeClock").innerHTML = NowTimeString;
+      }
+      setInterval('ShowClock()',1000);//繰り返し(1000ms)
+
+    </script>
+    <script>
+      var NewEle = 'width: 100%';
+      if(window.innerWidth >= 752 && window.innerWidth < 952)
+      {
+        var NewSize = window.innerWidth - 215;
+        NewEle = 'width: ' + NewSize + 'px';
+      }
+      else if(window.innerWidth >= 952)
+      {
+        var NewSize = window.innerWidth - 415;
+        NewEle = 'width: ' + NewSize + 'px';
+      }
+        Main_Main.setAttribute('style', NewEle);
+    </script>
+    <script>//ウィンドウ幅でメイン画面サイズ変更
+      var Timer = '';
+      window.onresize = function() 
+      {
+        if (Timer) 
+        {
+          clearTimeout(Timer);
+        }
+        Timer = setTimeout(function()
+        {
+          var NewEle = 'width: 100%';
+          if(window.innerWidth >= 752 && window.innerWidth < 952)
+          {
+            var NewSize = window.innerWidth - 215;
+            NewEle = 'width: ' + NewSize + 'px';
+          }
+          else if(window.innerWidth >= 952)
+          {
+            var NewSize = window.innerWidth - 415;
+            NewEle = 'width: ' + NewSize + 'px';
+          }
+            Main_Main.setAttribute('style', NewEle);
+          Twitter.setAttribute('data-theme', 'dark');
+
+        }, 100);
+      };
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><!--Twitter埋め込みjs-->
+    <script>
+      $(function() 
+      {
+        $.ajax(
+        {
+        url: 'info-rss.xml',
+        type: 'GET',
+        dataType: 'XML',
+        cache: false,
+        success: function(data) 
+        {
+          var UpdateTime = $(data).find('lastBuildDate').text();
+          $(data).find("item").each(function(index, item)
+          {
+            var Title = $(item).find('title').text();
+            var Link = $(item).find('link').text();
+            var Description = $(item).find('description').text();
+            var Dt = $(item).find('pubDate').text();
+            var Dt_ = new Date(Dt);
+            //Date_ = Date;
+            
+            $('#Infos').append(`${Dt_.getFullYear()}/${Dt_.getFullMonth()}/${Dt_.getFullDate()} <a href="${Link}" class="Border_Item" title="${Description}">${Title}<br></a>`);
+
+          });
+        },
+        error: function(err) 
+        {
+          console.log(err);
+        }
+  });
+});
+
+    </script>
+  </body>
+</html>

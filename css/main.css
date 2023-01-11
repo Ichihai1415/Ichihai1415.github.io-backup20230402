@@ -1,0 +1,297 @@
+body
+{
+  transition: .5s;
+  color: var(--ForeMain);
+  background-color: var(--BackMain);
+  margin: 0px;
+}
+:root
+{
+  --BackMain: rgb(240,240,255);
+  --BackHeader: rgb(225,225,225);
+  --BackMainMain: rgb(215,215,255);
+  --BackMainLink: rgb(205,205,255);
+  --BackHtag: rgba(127,127,127,0.1);
+  --ForeMain: rgb(0,0,30);
+  --ForeHeader: rgb(30,30,30);
+  --ForeMainMain: rgb(20,20,40);
+  --ForeMainLink: rgb(30,30,40);
+  --ForeHtag: rgb(15,15,15);
+}
+  .DarkColor
+  {
+    --BackMain: rgb(0,0,30);
+    --BackHeader: rgb(30,30,30);
+    --BackMainMain: rgb(20,20,40);
+    --BackMainLink: rgb(30,30,40);
+    --ForeMain: rgb(240,240,255);
+    --ForeHeader: rgb(225,225,225);
+    --ForeMainMain: rgb(215,215,255);
+    --ForeMainLink: rgb(205,205,255);
+    --ForeHtag: var(--ForeMain);
+
+  }
+.Main/*メイン画面*/
+{
+  
+  max-width: 100vw;
+  min-height: 100vw;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  
+}
+.Main_Main/*メイン画面のメイン画面(リンク等以外)*/
+{
+  transition: .5s;
+  height: 100%;
+
+  color: var(--ForeMainMain);
+  background-color: var(--BackMainMain);
+
+}
+.Main_Links
+{
+  width: 400px;
+  height: 100vw;
+  transition: .5s;
+
+  color: var(--ForeMainLink);
+  background-color: var(--BackMainLink);
+position: fixed;/*常時上に固定*/
+right: 0;
+}
+.Ender
+{
+width: 100%;
+color: var(--ForeHeader);
+background-color: var(--BackHeader);
+text-align: center;
+z-index: 1000;
+position: absolute;
+}
+@media screen and (max-width: 751px)
+{
+  .Main_Links,.Header_Item
+  {
+    display: none;
+  }
+}
+@media screen and (min-width: 752px) and (max-width: 951px)
+{
+  .Main_Links,.Twitter
+  {
+    width: 200px;
+  } 
+  .Header_Item
+  {
+    display: none;
+  } 
+}
+
+.Header
+{
+  transition: .5s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  color: var(--ForeHeader);
+  background-color: var(--BackHeader);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;/*最前面 !一番大きく*/
+}
+.Header_Inner/*ヘッダー内部*/
+{
+  width: 95%;
+  height: 100%;
+  display: flex;
+  transition: .5s;
+
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--BackHeader);
+
+}
+.Header_Logo
+{
+  flex: none;
+  width: 300px;
+  height: 75px;
+  background: var(--BackHeader);
+  transition: .5s;
+
+}
+.Header_Group
+{
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  transition: .5s;
+
+  background: var(--BackHeader);
+}
+.Header_Item
+{
+  text-decoration: none;
+  margin: 0px 10px;
+padding: 0px 5px;
+
+  font-size: 30px;
+  transition: .5s;
+
+  color: var(--ForeHeader);
+  background: var(--BackHeader);
+  border: var(--BackHeader) solid;
+
+  
+}
+.Header_Item:hover
+{
+  background: rgba(127,127,127,.5);
+  border: rgba(127,127,127,0) solid;
+  border-bottom: #0f0 solid;
+
+
+}
+
+.DarkmodeSwitch 
+{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 180px;
+  height: 10;
+}
+.SwitchInput 
+{
+  width: 0;/*チェックボックスを消す*/
+  cursor: pointer;
+}
+.SwitchLabel/*後ろのやつ*/
+{
+  width: 50px;
+  height: 25px;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  transition: .5s;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.SwitchLabel:after/*前のやつ*/
+{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  left: 0;
+  z-index: 2;
+  background-image: url("img/Icon_sun.jpg");
+  background-size: contain;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: .5s;
+}
+
+.SwitchInput:checked + .SwitchLabel
+{
+  background-color: rgb(80, 240, 80);
+}
+
+.SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
+{
+  left: 25px;
+  background-image: url("img/Icon_moon.jpg");
+}
+.NowTimeDisplay
+{  
+  margin-top: 4px;
+  font-size: 18px;
+  background-color: var(--BackHeader);
+  width: 180px;
+  text-align: center;
+  transition: .5s;
+
+}
+.Border
+{
+margin: 5px;
+padding: 5px;
+  border: 3px outset rgb(127, 127, 127);
+}
+a
+{
+  color: rgb(100, 100, 255);
+}
+.Anchor/*ページ内リンクジャンプの位置調整*/
+{
+  display: block;
+  padding-top: 100px;
+  margin-top: -100px;
+}
+h1,h2
+{
+  margin: 5px;
+  padding-left: 10px;
+  color: var(--ForeHtag);
+  background-color: var(--BackHtag);
+  transition: .5s;
+
+}
+h1
+{
+  border-left: 5px solid rgb(100, 255, 100);
+}
+h2
+{
+  border-left: 5px solid rgb(10, 100, 255);
+}
+
+.ContentsTable
+{
+  font-size: 24px;
+margin: 10px;
+background-color: rgba(100,100,255,0.2);
+
+border: 2px solid rgb(100,100,255);
+
+}
+.Content
+{
+transition: .5s;
+padding: 5px;
+  padding-left: 5px;
+
+}
+.Content:hover
+{
+  background-color: rgb(127,127,255);
+}
+.Content_Link1,.Content_Link2
+{
+color: var(--ForeMainLink);
+text-decoration: none;
+padding-left: 5px;
+width: 100%;
+display: block;
+transition: .5s;
+
+}
+.Content_Link1
+{
+border-left: 5px solid red;
+font-size: 30px;
+
+}
+.Content_Link2
+{
+border-left: 5px solid orange;
+font-size: 20px;
+
+}
