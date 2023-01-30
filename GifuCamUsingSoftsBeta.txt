@@ -53,6 +53,9 @@ https://github.com/ingen084/KyoshinMonitorProxy
 P2P地震情報 新Windows版
 https://www.p2pquake.net/
 
+Kiwi Monitor
+https://kiwimonitor.amebaownd.com/ (配布終了)
+
 棒読みちゃん
 http://chi.usamimi.info/Program/Application/BouyomiChan/
 
@@ -122,9 +125,6 @@ https://www.qim-quakeinfomonitor.com/ (リンク切れ)
 BR-N
 https://twitter.com/KuriharaCamera/status/1379819975116906501
 
-Kiwi Monitor
-https://kiwimonitor.amebaownd.com/ (配布終了)
-
 ティッカーくん
 https://rd.vector.co.jp/soft/winnt/net/se518506.html
 
@@ -160,14 +160,3 @@ https://chrome.google.com/webstore/detail/%E7%B7%8A%E6%80%A5%E5%9C%B0%E9%9C%87%E
 
 Pone
 https://ch.nicovideo.jp/bousai-share/blomaga/ar1934799
-
-
-
-
-
-
-
-
-
-
-
