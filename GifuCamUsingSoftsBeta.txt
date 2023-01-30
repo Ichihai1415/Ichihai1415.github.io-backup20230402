@@ -12,13 +12,6 @@ Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ) h
 Moo0システムモニター https://jpn.moo0.com/software/SystemMonitor/
 TweetDeck(@UN_NERV) https://tweetdeck.twitter.com/
 KyoshinMonitorProxy https://github.com/ingen084/KyoshinMonitorProxy
-P2P地震情報 新Windows版 https://www.p2pquake.net/
-棒読みちゃん http://chi.usamimi.info/Program/Application/BouyomiChan/
-The Last 10-Second http://weathernews.jp/quake/html/urgentquake.html
-OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上) https://obsproject.com
-FileKCC https://twitter.com/KuriharaCamera/status/1326509746359205888
-Sendkeys http://cspace.s2.xrea.com/
-その他自作ソフト https://github.com/Ichihai1415
 
 《使用中》
 【表示しているもの】
@@ -66,7 +59,7 @@ http://chi.usamimi.info/Program/Application/BouyomiChan/
 The Last 10-Second
 http://weathernews.jp/quake/html/urgentquake.html
 
-OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
+OBS studio (設定→ 1280x720 30fps 2000Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
 https://obsproject.com
 
 FileKCC
