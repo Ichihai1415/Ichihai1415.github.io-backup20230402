@@ -9,6 +9,7 @@ Clock For Fuku https://fuku1213.hatenablog.com/entry/2021/03/31/214957
 地牛Wake Up!(EEWを受信時のみ) https://eew.earthquake.tw/
 Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ) https://github.com/ExpTechTW/TREM
 緊急地震速報アラーム+ 応急版(EEW時のみ) http://wsparkle.s1008.xrea.com/programs/eewa2/
+Kiwi Monitor(EEW時のみ) https://kiwimonitor.amebaownd.com/ (配布終了)
 Moo0システムモニター https://jpn.moo0.com/software/SystemMonitor/
 TweetDeck(@UN_NERV) https://tweetdeck.twitter.com/
 KyoshinMonitorProxy https://github.com/ingen084/KyoshinMonitorProxy
@@ -39,6 +40,9 @@ https://github.com/ExpTechTW/TREM
 緊急地震速報アラーム+ 応急版(EEW時のみ)
 http://wsparkle.s1008.xrea.com/programs/eewa2/
 
+Kiwi Monitor(EEW時のみ)
+https://kiwimonitor.amebaownd.com/ (配布終了)
+
 Moo0システムモニター
 https://jpn.moo0.com/software/SystemMonitor/
 
@@ -52,9 +56,6 @@ https://github.com/ingen084/KyoshinMonitorProxy
 
 P2P地震情報 新Windows版
 https://www.p2pquake.net/
-
-Kiwi Monitor
-https://kiwimonitor.amebaownd.com/ (配布終了)
 
 棒読みちゃん
 http://chi.usamimi.info/Program/Application/BouyomiChan/
