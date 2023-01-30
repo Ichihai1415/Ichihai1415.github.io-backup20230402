@@ -22,7 +22,7 @@ KyoshinEewViewer for ingen
 https://svs.ingen084.net/kyoshineewviewer/
 
 QWPASS
-https://hachi508.com/QWPASS/
+https://qwpass.svdprev.info/
 
 Early-est
 http://early-est.rm.ingv.it/warning.html
@@ -74,7 +74,7 @@ https://fuku1213.github.io/quarog-site/
 《自作ソフト》
 【表示しているもの】
 EEW_Viewer2(非公開)
-https://github.com/Ichihai1415/EEW_Viewer2
+-
 
 QuakeMapGenarator(ソースコードのみ公開)
 https://github.com/Ichihai1415/QuakeMapGenerator
@@ -160,3 +160,14 @@ https://chrome.google.com/webstore/detail/%E7%B7%8A%E6%80%A5%E5%9C%B0%E9%9C%87%E
 
 Pone
 https://ch.nicovideo.jp/bousai-share/blomaga/ar1934799
+
+
+
+
+
+
+
+
+
+
+
