@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>welcome</title>
+    <script>
+      window.onload = function() 
+      {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        console.log(params);
+        const from = params.get("from");
+        if(from!=null)
+        {
+          const div = document.getElementById("from");
+          div.innerHTML = "You came from <span style=\"color: rgb(255,0,0)\">"+from+"</span>.";
+        }
+      }
+  </script>
+  <style>
+    p{
+      width: 100%;
+  font-size: 16px;
+  letter-spacing: .1em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid rgba(255,255,255,.5);
+  animation: typing 6s steps(600) infinite
+}
+
+@keyframes typing{
+  0% {width: 0;}
+}
+  </style>
+  </head>
+  <body>
+    <div id="from" style="font-size:30px;padding-bottom:10px; border-bottom: 1px solid rgb(0,0,0);"></div>
+    <p>This website is creating. I plan to complete it within 2023.</p>
+  </body>
+</html>
