@@ -11,40 +11,182 @@
     {
       padding-left: 10px;
       border-left: 5px solid rgb(0, 150, 200);
-      border-bottom: 2px solid rgb(0, 0, 150);
+      border-bottom: 1px solid rgb(0, 0, 150);
       background-color: rgb(200, 200, 200);
     }
     h2
     {
       padding-left: 8px;
       border-left: 5px solid rgb(0, 200, 150);
-      border-bottom: 2px solid rgb(0, 150, 0);
+      border-bottom: 1px solid rgb(0, 150, 0);
       background-color: rgb(200, 200, 200);
     }
     h3
     {
       padding-left: 6px;
       border-left: 5px solid rgb(200, 100, 100);
-      border-bottom: 2px solid rgb(200, 0, 0);
+      border-bottom: 1px solid rgb(200, 0, 0);
       background-color: rgb(200, 200, 200);
+    }
+    .news-header
+    {
+      padding-left: 5px;
+    }
+    .news-contents
+    {
+      background-color: rgb(200,200,200);
+    }
+    .news-content
+    {
+      font-size: 18px;
+      padding-left: 4px;
+      border-left: 3px solid rgb(150, 150, 0);
+      background-color: rgb(180, 180, 180);
+    }
+    .header
+    {
+      font-size:24px;
+      display: flex;
+      color: white;
+      background-color: black;
+      padding:16px;
+    }
+    .nowTime
+    {
+      margin-left: auto;
     }
     .Border
     {
-    margin: 5px;
-    padding: 5px;
-    border: 3px solid rgb(0, 0, 100);
+      margin: 5px;
+      padding: 5px;
+      position: relative;
+      overflow: hidden;
+      background-color: rgb(200,200,220);
+      
+    }
+    .Border .Border-content 
+    {
+      display: block;
+    }
+    .Border:before,
+    .Border:after,
+    .Border .Border-content:before,
+    .Border .Border-content:after 
+    {
+      content: '';
+      position: absolute;
+      background: #009;
+    }
+    .Border:before 
+    {
+      bottom: 0;
+      left: -100%;
+      width: 50%;
+      height: 2px;
+    }
+    .Border:after 
+    {
+      bottom: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+    .Border .Border-content:before 
+    {
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 2px;
+    }
+    .Border .Border-content:after
+    {
+      top: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+    /*左の時間(ループ時間)を半分にして3と4の右の時間(待機時間)を-左の時間し、@keyframesを変えれば(ループ時間が半分になる)2つに*/
+    .Border:before
+    {
+      animation: leftBorder 3s linear 0.5s infinite;/*2*/
+    }
+    .Border:after 
+    {
+      animation: bottomBorder 3s linear 1.5s infinite;/*3*/
+    }
+    .Border .Border-content:before 
+    {
+      animation: rightBorder 3s linear 2s infinite;/*4*/
+    }
+    .Border .Border-content:after 
+    {
+      animation: topBorder 3s linear 0s infinite;/*1*/
+    }
+    /*長さ=棒の長さ(-xxx%のところ)+移動距離(100%)*[ループ時間/移動時間]*/
+    /*※絶対値の合計=長さ(例: |500| + |-100| = 600 )*/
+    @keyframes topBorder/*1*/
+    {
+      0% {top:-100%;}
+      100% {top:500%;}
+    }
+    @keyframes bottomBorder/*3*/
+    {
+      0% {bottom:-100%;}
+      100% {bottom:500%;}
+    }
+    @keyframes leftBorder/*2*/
+    {
+      0% {left:-50%;}
+      100% {left:250%;}
+    }
+    @keyframes rightBorder/*4*/
+    {
+      0% {right:-50%;}
+      100% {right:250%;}
     }
   </style>
+  <script>
+    window.onload = function() 
+    {
+      const url = new URL(window.location.href);
+      const params = url.searchParams;
+      console.log(params);
+      const ver = params.get("ver");
+      if(ver!=null)
+      {
+        const div = document.getElementById("version");
+        div.innerHTML = "Your SimpleBrowser version:<span style=\"color: rgb(255,0,0)\">"+ver+"</span>";
+      }
+    }
+</script>
   </head>
   <body>
+    <div class="header">
+      SimpleBrowser - default page.
+      <div id="RealtimeClock" class="nowTime">
+        Loading...
+      </div>
+    </div>
+    <br>
+    <div id="version" style="font-size:20px;"></div>
+    <div id="versionLatest" style="font-size:20px;">Released version:<span style="color: rgb(255,0,0)">1.0.0</span>(2023/01/08)※Please check release page.</div>
     <h1>Welcome!</h1>
     This website is creating. I plan to complete it within 2023.
-    <div class="Border_Margin">
-      <div id="Infos" class="Border">
-      <span style="font-size: 24px;">NEWS  UPDATE:<span style="color: red;">2023/02/16</span></span><br>
-      I will update SimpleBrowser in <span style="color: red;">March 2023</span>. Update points:<br>
-      1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
-      2. Add <span style="color: red;">"Font change"</span>. This can fix the problem of display confusion.
+    <div class="Border">
+      <div class="news-header"> 
+        <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/02/18</span><br>
+      </div>
+      <div id="Infos" class="news-contents">
+        <span class="news-content">Default page updated <span style="color: blue;">2023/02/18</span>. </span><br>
+        Update points:<br>
+        1. Add <span style="color: red;">"animation news box"</span>. You can see the animation now.<br>
+        2. Add <span style="color: red;">"version check"</span>. Since v1.0.1 of SimpleBrowser, the current and latest versions can be checked when the default page is displayed.<br>
+        3. Add <span style="color: red;">"time display"</span>. You can see now time.<br>
+        <span class="news-content">I will update SimpleBrowser in <span style="color: blue;">March 2023</span>. </span><br>
+        Update points:<br>
+        1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
+        2. Add <span style="color: red;">"font change"</span>. This can fix the problem of display confusion.
+      </div>
     </div>
     <h2>Links</h2>
     <a href="https://github.com/Ichihai1415/SimpleBrowser">GitHub repository</a><br>
@@ -54,5 +196,27 @@
     <a href="https://google.com">Google</a><br>
     <a href="https://www.youtube.com">YouTube</a><br>
     <a href="https://twitter.com">Twitter</a><br>
+    <script>
+      //時計
+      function Puls0(Num) 
+      {
+        var NewNum = Num;
+        if(Num < 10)
+        {//桁数が1桁だったら0足して2桁に
+          NewNum = "0" + Num;
+        }
+        return NewNum;
+      }
+      function ShowClock() 
+      {
+        var NowTime = new Date();
+        var NowTimeHour = Puls0(NowTime.getHours());
+        var NowTimeMin  = Puls0(NowTime.getMinutes());
+        var NowTimeSec  = Puls0(NowTime.getSeconds());
+        var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
+        document.getElementById("RealtimeClock").innerHTML = NowTimeString;
+      }
+      setInterval('ShowClock()',1000);//繰り返し(1000ms)
+    </script>
   </body>
 </html>
