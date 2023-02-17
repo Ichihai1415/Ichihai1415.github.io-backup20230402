@@ -55,7 +55,7 @@
     {
       margin-left: auto;
     }
-    .Border
+    .news
     {
       margin: 5px;
       padding: 5px;
@@ -64,41 +64,41 @@
       background-color: rgb(200,200,220);
       
     }
-    .Border .Border-content 
+    .news .news-in 
     {
       display: block;
     }
-    .Border:before,
-    .Border:after,
-    .Border .Border-content:before,
-    .Border .Border-content:after 
+    .news:before,
+    .news:after,
+    .news .news-in:before,
+    .news .news-in:after 
     {
       content: '';
       position: absolute;
       background: #009;
     }
-    .Border:before 
+    .news:before 
     {
       bottom: 0;
       left: -100%;
       width: 50%;
       height: 2px;
     }
-    .Border:after 
+    .news:after 
     {
       bottom: -100%;
       right: 0;
       width: 2px;
       height: 100%;
     }
-    .Border .Border-content:before 
+    .news .news-in:before 
     {
       top: 0;
       right: -100%;
       width: 50%;
       height: 2px;
     }
-    .Border .Border-content:after
+    .news .news-in:after
     {
       top: -100%;
       left: 0;
@@ -106,19 +106,19 @@
       height: 100%;
     }
     /*左の時間(ループ時間)を半分にして3と4の右の時間(待機時間)を-左の時間し、@keyframesを変えれば(ループ時間が半分になる)2つに*/
-    .Border:before
+    .news:before
     {
       animation: leftBorder 3s linear 0.5s infinite;/*2*/
     }
-    .Border:after 
+    .news:after 
     {
       animation: bottomBorder 3s linear 1.5s infinite;/*3*/
     }
-    .Border .Border-content:before 
+    .news .news-in:before 
     {
       animation: rightBorder 3s linear 2s infinite;/*4*/
     }
-    .Border .Border-content:after 
+    .news .news-in:after 
     {
       animation: topBorder 3s linear 0s infinite;/*1*/
     }
@@ -172,20 +172,22 @@
     <div id="versionLatest" style="font-size:20px;">Released version:<span style="color: rgb(255,0,0)">1.0.0</span>(2023/01/08)※Please check release page.</div>
     <h1>Welcome!</h1>
     This website is creating. I plan to complete it within 2023.
-    <div class="Border">
-      <div class="news-header"> 
-        <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/02/18</span><br>
-      </div>
-      <div id="Infos" class="news-contents">
-        <span class="news-content">Default page updated <span style="color: blue;">2023/02/18</span>. </span><br>
-        Update points:<br>
-        1. Add <span style="color: red;">"animation news box"</span>. You can see the animation now.<br>
-        2. Add <span style="color: red;">"version check"</span>. Since v1.0.1 of SimpleBrowser, the current and latest versions can be checked when the default page is displayed.<br>
-        3. Add <span style="color: red;">"time display"</span>. You can see now time.<br>
-        <span class="news-content">I will update SimpleBrowser in <span style="color: blue;">March 2023</span>. </span><br>
-        Update points:<br>
-        1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
-        2. Add <span style="color: red;">"font change"</span>. This can fix the problem of display confusion.
+    <div class="news">
+      <div class="news-in">
+        <div class="news-header"> 
+          <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/02/18</span><br>
+        </div>
+        <div id="Infos" class="news-contents">
+          <span class="news-content">Default page updated <span style="color: blue;">2023/02/18</span>. </span><br>
+          Update points:<br>
+          1. Add <span style="color: red;">"animation news box"</span>. You can see the animation now.<br>
+          2. Add <span style="color: red;">"version check"</span>. Since v1.0.1 of SimpleBrowser, the current and latest versions can be checked when the default page is displayed.<br>
+          3. Add <span style="color: red;">"time display"</span>. You can see now time.<br>
+          <span class="news-content">I will update SimpleBrowser in <span style="color: blue;">March 2023</span>. </span><br>
+          Update points:<br>
+          1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
+          2. Add <span style="color: red;">"font change"</span>. This can fix the problem of display confusion.
+        </div>
       </div>
     </div>
     <h2>Links</h2>
