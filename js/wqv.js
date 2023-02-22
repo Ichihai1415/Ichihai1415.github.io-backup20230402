@@ -1,8 +1,8 @@
 window.onload = function()
 {
-  getJson();//作成時はコメントアウトする
+  getJson();//作成時は↓にする
   //setTimeout("getJson()", 10000);
-  //setInterval("getJson()", 30000);
+  setInterval("getJson()", 30000);
 }
 
 function getJson() 
@@ -15,13 +15,14 @@ function getJson()
     if (request.readyState == 4 && request.status == 200) 
     {
       let json = JSON.parse(request.responseText);
-      for (let i = 0; i < 1; i++) //json.features.length
+      document.getElementById("main").innerHTML="";
+      for (let i = 0; i < json.features.length; i++)
       {
         let text = "震源:"+json.features[i].properties.place+"<br>"
         +json.features[i].geometry.coordinates[1]+"°,"+json.features[i].geometry.coordinates[0]+"°<br>深さ:"
         +json.features[i].geometry.coordinates[2]+"km<br>"
         +json.features[i].properties.magType+json.features[i].properties.mag + "  改正メルカリ震度階級:"+json.features[i].properties.mmi;
-        document.getElementById("main").innerHTML = text;
+        document.getElementById("main").innerHTML += "<p>"+text+"</p>";
       }
     }
   }
