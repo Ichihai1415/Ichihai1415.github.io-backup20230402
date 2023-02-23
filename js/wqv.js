@@ -22,7 +22,7 @@ function getJson()
         +json.features[i].geometry.coordinates[1]+"°,"+json.features[i].geometry.coordinates[0]+"°<br>深さ:"
         +json.features[i].geometry.coordinates[2]+"km<br>"
         +json.features[i].properties.magType+json.features[i].properties.mag + "  改正メルカリ震度階級:"+json.features[i].properties.mmi;
-        document.getElementById("main").innerHTML += "<p>"+text+"</p>";
+        document.getElementById("main").innerHTML += text+"<br>";
       }
     }
   }
