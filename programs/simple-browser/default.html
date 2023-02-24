@@ -10,23 +10,34 @@
     h1
     {
       padding-left: 10px;
-      border-left: 5px solid rgb(0, 150, 200);
-      border-bottom: 1px solid rgb(0, 0, 150);
+      border-left: 5px solid rgb(0, 0, 150);
+      border-bottom: 1px solid rgb(0, 150, 200);
       background-color: rgb(200, 200, 200);
     }
     h2
     {
       padding-left: 8px;
-      border-left: 5px solid rgb(0, 200, 150);
-      border-bottom: 1px solid rgb(0, 150, 0);
+      border-left: 5px solid rgb(0, 150, 0);
+      border-bottom: 1px solid rgb(0, 200, 150);
       background-color: rgb(200, 200, 200);
     }
     h3
     {
       padding-left: 6px;
-      border-left: 5px solid rgb(200, 100, 100);
-      border-bottom: 1px solid rgb(200, 0, 0);
+      border-left: 5px solid rgb(200, 0,0);
+      border-bottom: 1px solid rgb(200,100, 100);
       background-color: rgb(200, 200, 200);
+    }
+    del
+    {
+      color: #666;
+      background-color: #aaa;
+    }
+    ins
+    {
+      color:rgb(150, 0, 0);
+      background-color: rgba(255,0,0,.1);
+      text-decoration-line:none;/*spanで効かないから既定をnone*/
     }
     .news-header
     {
@@ -62,7 +73,6 @@
       position: relative;
       overflow: hidden;
       background-color: rgb(200,200,220);
-      
     }
     .news .news-in 
     {
@@ -174,14 +184,15 @@
     <div class="news">
       <div class="news-in">
         <div class="news-header"> 
-          <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/02/18</span><br>
+          <span style="font-size: 24px;">NEWS</span>  UPDATE:<span style="color: blue;">2023/02/24</span><br>
         </div>
         <div id="Infos" class="news-contents">
-          <span class="news-content">Default page updated <span style="color: blue;">2023/02/18</span>. </span><br>
+          <span class="news-content">Default page updated <span style="color: blue;">2023/02/18,24</span>.</span><br>
           Update points:<br>
           1. Add <span style="color: red;">"animation news box"</span>. You can see the animation now.<br>
-          2. Add <span style="color: red;">"version check"</span>. Since v1.0.1 of SimpleBrowser, the current and latest versions can be checked when the default page is displayed.<br>
+          2. Add <span style="color: red;">"version check"</span>. Since v1.0.1 of SimpleBrowser, the current <del datetime="2023-02-24">and latest</del> version can be checked when the default page is displayed. <ins>Update 2023/02/24: <span style="text-decoration-line:underline;">I will do the display of the latest version when I can automate it.</span></ins><br>
           3. Add <span style="color: red;">"time display"</span>. You can see now time.<br>
+          4. And more...(e.g. code revision, design change)<br>
           <span class="news-content">I will update SimpleBrowser in <span style="color: blue;">March 2023</span>. </span><br>
           Update points:<br>
           1. Add <span style="color: red;">"favorite list"</span>. This can save your favorite pages.<br>
@@ -197,13 +208,12 @@
     <a href="https://google.com">Google</a><br>
     <a href="https://www.youtube.com">YouTube</a><br>
     <a href="https://twitter.com">Twitter</a><br>
-    <script>
-      //時計
-      function Puls0(Num) 
+    <script>//時計
+      function Plus0(Num) 
       {
         var NewNum = Num;
         if(Num < 10)
-        {//桁数が1桁だったら0足して2桁に
+        {
           NewNum = "0" + Num;
         }
         return NewNum;
@@ -211,13 +221,13 @@
       function ShowClock() 
       {
         var NowTime = new Date();
-        var NowTimeHour = Puls0(NowTime.getHours());
-        var NowTimeMin  = Puls0(NowTime.getMinutes());
-        var NowTimeSec  = Puls0(NowTime.getSeconds());
+        var NowTimeHour = Plus0(NowTime.getHours());
+        var NowTimeMin  = Plus0(NowTime.getMinutes());
+        var NowTimeSec  = Plus0(NowTime.getSeconds());
         var NowTimeString = "NowTime:" + NowTimeHour + ":" + NowTimeMin + ":" + NowTimeSec;
         document.getElementById("RealtimeClock").innerHTML = NowTimeString;
       }
-      setInterval('ShowClock()',1000);//繰り返し(1000ms)
+      setInterval('ShowClock()',1000);
     </script>
   </body>
 </html>
