@@ -18,22 +18,20 @@ body
   --ForeMainLink: rgb(30,30,40);
   --ForeHtag: rgb(15,15,15);
 }
-  .DarkColor
-  {
-    --BackMain: rgb(0,0,30);
-    --BackHeader: rgb(30,30,30);
-    --BackMainMain: rgb(20,20,40);
-    --BackMainLink: rgb(30,30,40);
-    --ForeMain: rgb(240,240,255);
-    --ForeHeader: rgb(225,225,225);
-    --ForeMainMain: rgb(215,215,255);
-    --ForeMainLink: rgb(205,205,255);
-    --ForeHtag: var(--ForeMain);
-
-  }
+.DarkColor
+{
+  --BackMain: rgb(0,0,30);
+  --BackHeader: rgb(30,30,30);
+  --BackMainMain: rgb(20,20,40);
+  --BackMainLink: rgb(30,30,40);
+  --ForeMain: rgb(240,240,255);
+  --ForeHeader: rgb(225,225,225);
+  --ForeMainMain: rgb(215,215,255);
+  --ForeMainLink: rgb(205,205,255);
+  --ForeHtag: var(--ForeMain);
+}
 .Main/*メイン画面*/
 {
-  
   max-width: 100vw;
   min-height: 100vw;
   margin-top: 100px;

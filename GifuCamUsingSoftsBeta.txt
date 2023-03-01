@@ -1,4 +1,19 @@
-2023/01/10更新
+使用ソフト一覧
+2023/01/30更新
+【簡易版(自作除く)】
+JQuake https://jquake.net/
+KyoshinEewViewer for ingen https://svs.ingen084.net/kyoshineewviewer/
+QWPASS https://qwpass.svdprev.info/
+Early-est http://early-est.rm.ingv.it/warning.html
+Clock For Fuku https://fuku1213.hatenablog.com/entry/2021/03/31/214957
+地牛Wake Up!(EEWを受信時のみ) https://eew.earthquake.tw/
+Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ) https://github.com/ExpTechTW/TREM
+緊急地震速報アラーム+ 応急版(EEW時のみ) http://wsparkle.s1008.xrea.com/programs/eewa2/
+Kiwi Monitor(EEW時のみ) https://kiwimonitor.amebaownd.com/ (配布終了)
+Moo0システムモニター https://jpn.moo0.com/software/SystemMonitor/
+TweetDeck(@UN_NERV) https://tweetdeck.twitter.com/
+KyoshinMonitorProxy https://github.com/ingen084/KyoshinMonitorProxy
+
 《使用中》
 【表示しているもの】
 JQuake
@@ -7,64 +22,62 @@ https://jquake.net/
 KyoshinEewViewer for ingen
 https://svs.ingen084.net/kyoshineewviewer/
 
-P2P地震情報 新Windows版
-https://www.p2pquake.net/
-
 QWPASS
-https://hachi508.com/QWPASS/
-
-強震モニタ24h
-https://eqdata.sakura.ne.jp/kyoshin/ws.html
+https://qwpass.svdprev.info/
 
 Early-est
 http://early-est.rm.ingv.it/warning.html
 
-気象庁気象マップ
-https://www.jma.go.jp/bosai/map.html
-
-TweetDeck(@UN_NERV)
-https://tweetdeck.twitter.com/
-
 Clock For Fuku
 https://fuku1213.hatenablog.com/entry/2021/03/31/214957
 
-緊急地震速報アラーム+ 応急版(EEW時のみ)
-http://wsparkle.s1008.xrea.com/programs/eewa2/
+地牛Wake Up!(EEWを受信時のみ)
+https://eew.earthquake.tw/
 
 Taiwan Real-time Earthquake Monitoring(地牛Wake Up!でEEWを受信時のみ)
 https://github.com/ExpTechTW/TREM
 
-地牛Wake Up!(EEW受信時のみ)
-https://eew.earthquake.tw/
+緊急地震速報アラーム+ 応急版(EEW時のみ)
+http://wsparkle.s1008.xrea.com/programs/eewa2/
+
+Kiwi Monitor(EEW時のみ)
+https://kiwimonitor.amebaownd.com/ (配布終了)
 
 Moo0システムモニター
 https://jpn.moo0.com/software/SystemMonitor/
 
+TweetDeck(@UN_NERV)
+https://tweetdeck.twitter.com/
+
+KyoshinMonitorProxy
+https://github.com/ingen084/KyoshinMonitorProxy
+
 【画面外(動作・SEなど)】
+
+P2P地震情報 新Windows版
+https://www.p2pquake.net/
+
 棒読みちゃん
 http://chi.usamimi.info/Program/Application/BouyomiChan/
 
 The Last 10-Second
 http://weathernews.jp/quake/html/urgentquake.html
 
-OBS studio (設定→ 1280x720 30fps 1500Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s)
+OBS studio (設定→ 1280x720 30fps 2000Kbps x264 レート制御:CBR CPUプリセット:ultrafast Direct3D 11 リプレイバッファ:480s プロセス優先度:通常以上)
 https://obsproject.com
 
 FileKCC
 https://twitter.com/KuriharaCamera/status/1326509746359205888
-	
-Kiwi Monitor
-https://kiwimonitor.amebaownd.com/ (配布終了)
-
-Quarog
-https://fuku1213.github.io/quarog-site/
 
 Sendkeys
 http://cspace.s2.xrea.com/
 
+Quarog
+https://fuku1213.github.io/quarog-site/
+
 《自作ソフト》
 【表示しているもの】
-EEW Viewer2(非公開)
+EEW_Viewer2(非公開)
 -
 
 QuakeMapGenarator(ソースコードのみ公開)
@@ -76,14 +89,12 @@ https://github.com/Ichihai1415/Telop
 WorldQuakeViewer
 https://github.com/Ichihai1415/WorldQuakeViewer
 
-Arduino_Quake_Intensity_Viewer(ソースコードのみ公開)(計測:GROVE I2C三軸加速度センサADXL345(±16g)(設置方向:X=E,Y=N,Z=U) Seeeduino Nano)
-https://github.com/Ichihai1415/Arduino_Quake_Intensity_Viewer
-
 S-net Viewer
 https://github.com/Ichihai1415/S-net_Viewer
 
-KyoshinMonitorDisplay(非公開)
--
+Arduino_Quake_Intensity_Viewer(ソースコードのみ公開)(計測:GROVE I2C三軸加速度センサADXL345(±16g)(設置方向:X=E,Y=N,Z=U) Seeeduino Nano)
+https://github.com/Ichihai1415/Arduino_Quake_Intensity_Viewer
+
 
 [以前の動画で使用]
 
@@ -117,6 +128,12 @@ https://twitter.com/KuriharaCamera/status/1379819975116906501
 
 ティッカーくん
 https://rd.vector.co.jp/soft/winnt/net/se518506.html
+
+強震モニタ24h
+https://eqdata.sakura.ne.jp/kyoshin/ws.html
+
+気象庁気象マップ
+https://www.jma.go.jp/bosai/map.html
 
 Weather Warning Map
 https://fuku1213.hatenablog.com/entry/2021/01/24/160005
