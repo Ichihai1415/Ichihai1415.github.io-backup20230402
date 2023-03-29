@@ -18,7 +18,19 @@ body
   --ForeMainLink: rgb(30,30,40);
   --ForeHtag: rgb(15,15,15);
 }
-.DarkColor
+.light-color
+{
+  --BackMain: rgb(240,240,255);
+  --BackHeader: rgb(225,225,225);
+  --BackMainMain: rgb(215,215,255);
+  --BackMainLink: rgb(205,205,255);
+  --ForeMain: rgb(0,0,30);
+  --ForeHeader: rgb(30,30,30);
+  --ForeMainMain: rgb(20,20,40);
+  --ForeMainLink: rgb(30,30,40);
+  --ForeHtag: rgb(15,15,15);
+}
+.dark-color
 {
   --BackMain: rgb(0,0,30);
   --BackHeader: rgb(30,30,30);
@@ -30,7 +42,7 @@ body
   --ForeMainLink: rgb(205,205,255);
   --ForeHtag: var(--ForeMain);
 }
-.Main/*メイン画面*/
+.main/*メイン画面*/
 {
   max-width: 100vw;
   min-height: 100vw;
@@ -39,7 +51,7 @@ body
   flex-direction: row;
   
 }
-.Main_Main/*メイン画面のメイン画面(リンク等以外)*/
+.main-main/*メイン画面のメイン画面(リンク等以外)*/
 {
   transition: .5s;
   height: 100%;
@@ -48,7 +60,7 @@ body
   background-color: var(--BackMainMain);
 
 }
-.Main_Links
+.main-links
 {
   width: 400px;
   height: 100vw;
@@ -59,35 +71,36 @@ body
 position: fixed;/*常時上に固定*/
 right: 0;
 }
-.Ender
+.ender
 {
+  transition: .5s;
 width: 100%;
 color: var(--ForeHeader);
 background-color: var(--BackHeader);
 text-align: center;
 z-index: 1000;
 position: absolute;
-}
+} 
 @media screen and (max-width: 751px)
 {
-  .Main_Links,.Header_Item
+  .main_links,.header-item
   {
     display: none;
   }
 }
 @media screen and (min-width: 752px) and (max-width: 951px)
 {
-  .Main_Links,.Twitter
+  .main-links,.twitter
   {
     width: 200px;
   } 
-  .Header_Item
+  .header-item
   {
     display: none;
   } 
 }
 
-.Header
+.header
 {
   transition: .5s;
   position: fixed;
@@ -102,7 +115,7 @@ position: absolute;
   align-items: center;
   z-index: 10000;/*最前面 !一番大きく*/
 }
-.Header_Inner/*ヘッダー内部*/
+.header-inner/*ヘッダー内部*/
 {
   width: 95%;
   height: 100%;
@@ -114,7 +127,7 @@ position: absolute;
   background: var(--BackHeader);
 
 }
-.Header_Logo
+.header-logo
 {
   flex: none;
   width: 300px;
@@ -123,7 +136,7 @@ position: absolute;
   transition: .5s;
 
 }
-.Header_Group
+.header-group1
 {
   margin-left: auto;
   display: flex;
@@ -132,7 +145,7 @@ position: absolute;
 
   background: var(--BackHeader);
 }
-.Header_Item
+.header-item
 {
   text-decoration: none;
   margin: 0px 10px;
@@ -147,7 +160,7 @@ padding: 0px 5px;
 
   
 }
-.Header_Item:hover
+.header-item:hover
 {
   background: rgba(127,127,127,.5);
   border: rgba(127,127,127,0) solid;
@@ -156,7 +169,7 @@ padding: 0px 5px;
 
 }
 
-.DarkmodeSwitch 
+.darkmode-switch 
 {
   font-size: 20px;
   display: flex;
@@ -164,12 +177,12 @@ padding: 0px 5px;
   width: 180px;
   height: 10;
 }
-.SwitchInput 
+.switch-input 
 {
   width: 0;/*チェックボックスを消す*/
   cursor: pointer;
 }
-.SwitchLabel/*後ろのやつ*/
+.switch-label/*後ろのやつ*/
 {
   width: 50px;
   height: 25px;
@@ -182,7 +195,7 @@ padding: 0px 5px;
   cursor: pointer;
 }
 
-.SwitchLabel:after/*前のやつ*/
+.switch-label:after/*前のやつ*/
 {
   content: "";
   position: absolute;
@@ -197,17 +210,17 @@ padding: 0px 5px;
   transition: .5s;
 }
 
-.SwitchInput:checked + .SwitchLabel
+.switch-input:checked + .switch-label
 {
   background-color: rgb(80, 240, 80);
 }
 
-.SwitchInput:checked + .SwitchLabel:after /*ボタン押下で右に移動*/
+.switch-input:checked + .switch-label:after /*ボタン押下で右に移動*/
 {
   left: 25px;
   background-image: url("img/Icon_moon.jpg");
 }
-.NowTimeDisplay
+.nowtime-display
 {  
   margin-top: 4px;
   font-size: 18px;
@@ -217,7 +230,7 @@ padding: 0px 5px;
   transition: .5s;
 
 }
-.Border
+.border
 {
 margin: 5px;
 padding: 5px;
@@ -227,7 +240,7 @@ a
 {
   color: rgb(100, 100, 255);
 }
-.Anchor/*ページ内リンクジャンプの位置調整*/
+.anchor/*ページ内リンクジャンプの位置調整*/
 {
   display: block;
   padding-top: 100px;
@@ -251,7 +264,7 @@ h2
   border-left: 5px solid rgb(10, 100, 255);
 }
 
-.ContentsTable
+.contents-table
 {
   font-size: 24px;
 margin: 10px;
@@ -259,20 +272,77 @@ background-color: rgba(100,100,255,0.2);
 
 border: 2px solid rgb(100,100,255);
 
-}
-.Content
+}/*
+.content
 {
+transform-origin: left top;
+
 transition: .5s;
+transform-origin: left top;
 padding: 5px;
-  padding-left: 5px;
 
 }
-.Content:hover
+.content::after
+{
+  background: #ff701e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.content:hover
 {
   background-color: rgb(127,127,255);
+transform-origin: left top;
+
+  
 }
-.Content_Link1,.Content_Link2
+.content:hover::after 
 {
+  transform: scale(1, 1);
+}
+*/
+
+.content {
+  position: relative;
+  display: inline-block;
+  padding: .5em 4em;
+  border: 2px solid #333;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+.content:hover {
+  color: #fff;
+}
+.content::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: #333;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.content:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.content-link1,.content-link2
+{
+  
 color: var(--ForeMainLink);
 text-decoration: none;
 padding-left: 5px;
@@ -281,13 +351,13 @@ display: block;
 transition: .5s;
 
 }
-.Content_Link1
+.content-link1
 {
 border-left: 5px solid red;
 font-size: 30px;
 
 }
-.Content_Link2
+.content-link2
 {
 border-left: 5px solid orange;
 font-size: 20px;
