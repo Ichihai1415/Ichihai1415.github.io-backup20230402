@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <title>WorldQuakeViewer for WEB</title>
+  <style>
+    @font-face 
+    {
+      font-family: DSEG7;
+      src: url(/font/DSEG7Classic-Bold.woff2);
+    }
+    .back
+    {
+    font-family: DSEG7;
+    font-size: 18vw;
+    color:rgb(200, 200, 200);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .time 
+    {
+    color:black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  </style>
+  </head>
+  <body>
+  <div class="back">
+    88:88:88
+    <div class="time" id="time">loading...</div>
+  </div>
+  <noscript>
+    <span style="color:red; font-size: 20px;">javascriptを有効にしてください。</span>
+  </noscript>
+  </body>
+  <script>
+    function plus0(num) 
+    {
+      var newNum = num;
+      if(num < 10)
+      {
+        newNum = "0" + num;
+      }
+      return newNum;
+    }
+    function showClock() 
+    {
+      var nowTime = new Date();
+      var nowTimeHour = plus0(nowTime.getHours());
+      var nowTimeMin  = plus0(nowTime.getMinutes());
+      var nowTimeSec  = plus0(nowTime.getSeconds());
+      var nowTimeString = nowTimeHour + ":" + nowTimeMin + ":" + nowTimeSec;
+      document.getElementById("time").innerHTML = nowTimeString;
+    }
+    setInterval("showClock()",1000);
+    showClock();
+  </script>
+</html>
