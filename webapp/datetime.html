@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+  <title>日付時刻表示</title>
+  <style>
+    @font-face 
+    {
+      font-family: DSEG7;
+      src: url("/font/DSEG7Classic-Bold.woff2") format("woff2"),
+      url("/font/DSEG7Classic-Bold.woff") format("woff"),
+      url("/font/DSEG7Classic-Bold.ttf") format("ttf");
+    }
+    @font-face 
+    {
+      font-family: DSEG14;
+      src: url("/font/DSEG14Classic-Regular.woff2") format("woff2"),
+      url("/font/DSEG14Classic-Regular.woff") format("woff"),
+      url("/font/DSEG14Classic-Regular.ttf") format("ttf");
+    }
+    .dateBack
+    {
+      font-family: DSEG14;
+      font-size: 7.62vw;
+      color:rgb(200, 200, 200);
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+    .dateMain
+    {
+      color:black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .dateNum
+    {
+      font-family: DSEG7;
+    }
+    .timeBack
+    {
+      font-family: DSEG7;
+      font-size: 18vw;
+      color:rgb(200, 200, 200);
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
+    .timeMain
+    {
+      color:black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  </head>
+  <body>
+  <div class="main">
+    <div class="dateBack">
+      <span class="dateNum">8888</span>/<span class="dateNum">88</span>/<span class="dateNum">88</span>(~~~)
+      <div class="dateMain" id="date"></div>
+    </div>
+    <div class="timeBack">
+      88:88:88
+      <div class="timeMain" id="time"></div>
+    </div>
+  </div>
+  <noscript>
+    <span style="color:red; font-size: 20px;">javascriptを有効にしてください。</span>
+  </noscript>
+  </body>
+  <script>
+    function plus0(num) 
+    {
+      var newNum = num;
+      if(num < 10)
+      {
+        newNum = "0" + num;
+      }
+      return newNum;
+    }
+    function showClock() 
+    {
+      var nowTime = new Date();
+      var nowYear = nowTime.getFullYear();
+      var nowMonth = plus0(nowTime.getMonth());
+      var nowDate = plus0(nowTime.getDate());
+      var nowDay = nowTime.toString().split(" ")[0];
+      var nowTimeHour = plus0(nowTime.getHours());
+      var nowTimeMin  = plus0(nowTime.getMinutes());
+      var nowTimeSec  = plus0(nowTime.getSeconds());
+      var nowDateString = '<span class="dateNum">' + nowYear + '</span>/<span class="dateNum">' + nowMonth + '</span>/<span class="dateNum">' + nowDate + '</span>(' + nowDay + ')';
+      var nowTimeString = nowTimeHour + ":" + nowTimeMin + ":" + nowTimeSec;
+      document.getElementById("date").innerHTML = nowDateString;
+      document.getElementById("time").innerHTML = nowTimeString;
+    }
+    setInterval("showClock()",1000);
+    showClock();
+  </script>
+</html>
