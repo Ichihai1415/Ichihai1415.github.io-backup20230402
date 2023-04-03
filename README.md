@@ -1,2 +1,1 @@
-[![pages-build-deployment](https://github.com/Ichihai1415/Ichihai1415.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Ichihai1415/Ichihai1415.github.io/actions/workflows/pages/pages-build-deployment)
-# 作成中
+エラー出たので再作成しました(https://github.com/Ichihai1415/Ichihai1415.github.io)
